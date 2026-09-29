@@ -1,0 +1,46 @@
+services:
+  ros:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nexor_ros
+    stdin_open: true
+    tty: true
+    working_dir: /ros2_ws
+    ports:
+      - "8080:8080"
+      - "8090:8090"
+
+    environment:
+      ROS_DOMAIN_ID: "42"
+      ROS_AUTOMATIC_DISCOVERY_RANGE: "SUBNET"
+      TURTLEBOT3_MODEL: "waffle_pi"
+      DISPLAY: "${DISPLAY:-:0}"
+      WAYLAND_DISPLAY: "${WAYLAND_DISPLAY:-wayland-0}"
+      XDG_RUNTIME_DIR: "/mnt/wslg/runtime-dir"
+      PULSE_SERVER: "${PULSE_SERVER:-unix:/mnt/wslg/PulseServer}"
+
+      QT_QPA_PLATFORM: "xcb"
+      QT_X11_NO_MITSHM: "1"
+
+      LD_LIBRARY_PATH: "/usr/lib/wsl/lib"
+      GALLIUM_DRIVER: "d3d12"
+      MESA_D3D12_DEFAULT_ADAPTER_NAME: "NVIDIA"
+      GZ_SIM_RESOURCE_PATH: "/ros2_ws/src/restaurant_sim/models"
+    devices:
+      - /dev/dxg:/dev/dxg
+
+    volumes:
+      - ./ros2_ws/src:/ros2_ws/src
+      - ros2_build:/ros2_ws/build
+      - ros2_install:/ros2_ws/install
+      - ros2_log:/ros2_ws/log
+
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw
+      - /mnt/wslg:/mnt/wslg
+      - /usr/lib/wsl:/usr/lib/wsl:ro
+
+volumes:
+  ros2_build:
+  ros2_install:
+  ros2_log:

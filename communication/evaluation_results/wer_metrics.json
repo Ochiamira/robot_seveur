@@ -1,0 +1,65 @@
+{
+  "created_at_utc": "2026-08-25T11:53:28.549587+00:00",
+  "model_dir": "C:\\pfe_project\\whisper-small\\final",
+  "model_checkpoint": 3500,
+  "dataset_dir": "C:\\pfe_project\\communication\\stt\\whisper_featuress\\dataset_final",
+  "split": "test",
+  "language_mode": "auto",
+  "normalization": "none",
+  "device": "cuda",
+  "selected_distribution": {
+    "ar": 1421,
+    "en": 1280,
+    "fr": 1353
+  },
+  "global": {
+    "examples": 4054,
+    "reference_words": 32057,
+    "wer": 0.09620363727111084,
+    "wer_percent": 9.620363727111084,
+    "substitutions": 2369,
+    "deletions": 425,
+    "insertions": 290,
+    "reference_characters": 178861,
+    "cer": 0.043749056529931066,
+    "cer_percent": 4.374905652993107
+  },
+  "by_language": {
+    "ar": {
+      "examples": 1421,
+      "reference_words": 9065,
+      "wer": 0.06188637617209046,
+      "wer_percent": 6.188637617209046,
+      "substitutions": 352,
+      "deletions": 69,
+      "insertions": 140,
+      "reference_characters": 51112,
+      "cer": 0.02674518704022539,
+      "cer_percent": 2.674518704022539
+    },
+    "en": {
+      "examples": 1280,
+      "reference_words": 10567,
+      "wer": 0.04031418567237627,
+      "wer_percent": 4.031418567237627,
+      "substitutions": 396,
+      "deletions": 17,
+      "insertions": 13,
+      "reference_characters": 56690,
+      "cer": 0.012153819015699417,
+      "cer_percent": 1.2153819015699416
+    },
+    "fr": {
+      "examples": 1353,
+      "reference_words": 12425,
+      "wer": 0.16877263581488933,
+      "wer_percent": 16.877263581488933,
+      "substitutions": 1621,
+      "deletions": 339,
+      "insertions": 137,
+      "reference_characters": 71059,
+      "cer": 0.08118605665714407,
+      "cer_percent": 8.118605665714407
+    }
+  }
+}

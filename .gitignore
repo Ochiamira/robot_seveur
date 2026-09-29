@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Variables sensibles
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*.json
+secrets*.yaml
+secrets*.yml
+
+# ROS 2
+ros2/ros2_ws/build/
+ros2/ros2_ws/install/
+ros2/ros2_ws/log/
+
+# Fichiers temporaires
+*.log
+*.lock
+.DS_Store
+Thumbs.db
+
+# Données d'exécution
+application/ws/*.db
+application/ws/*.db-*
+communication/logs/
+communication/staff_queue/*.jsonl

@@ -1,0 +1,926 @@
+{
+  "restaurant": {
+    "nom": "NEXOR",
+    "devise": "TND"
+  },
+  "categories": [
+    {
+      "id": "entrees",
+      "nom": {
+        "fr": "Entrées",
+        "en": "Starters",
+        "ar": "المقبلات"
+      },
+      "icon": "🥗"
+    },
+    {
+      "id": "plats",
+      "nom": {
+        "fr": "Plats",
+        "en": "Main dishes",
+        "ar": "الأطباق الرئيسية"
+      },
+      "icon": "🍲"
+    },
+    {
+      "id": "boissons",
+      "nom": {
+        "fr": "Boissons",
+        "en": "Drinks",
+        "ar": "المشروبات"
+      },
+      "icon": "☕"
+    },
+    {
+      "id": "desserts",
+      "nom": {
+        "fr": "Desserts",
+        "en": "Desserts",
+        "ar": "الحلويات"
+      },
+      "icon": "🍰"
+    },
+    {
+      "id": "pates",
+      "nom": {
+        "fr": "Pâtes",
+        "en": "Pasta",
+        "ar": "المعكرونة"
+      },
+      "icon": "🍝"
+    },
+    {
+      "id": "pizzas",
+      "nom": {
+        "fr": "Pizzas",
+        "en": "Pizzas",
+        "ar": "بيتزا"
+      },
+      "icon": "🍕"
+    }
+  ],
+  "items": [
+    {
+      "id": "item_001",
+      "nom": {
+        "fr": "Salade tunisienne",
+        "en": "Tunisian salad",
+        "ar": "سلطة تونسية"
+      },
+      "description": {
+        "fr": "Tomate, poivron, oignon, thon, œuf",
+        "en": "Tomato, pepper, onion, tuna, egg",
+        "ar": "طماطم، فلفل، بصل، تونة، بيض"
+      },
+      "categorie": "entrees",
+      "prix": 8.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "salade_tunisienne.jpg"
+    },
+    {
+      "id": "item_020",
+      "nom": {
+        "fr": "Brik à l'œuf",
+        "en": "Egg brik",
+        "ar": "بريك بالبيضة"
+      },
+      "description": {
+        "fr": "Feuille de brick croustillante, œuf, thon, câpres",
+        "en": "Crispy pastry, egg, tuna, capers",
+        "ar": "عجينة مقرمشة، بيضة، تونة، كبار"
+      },
+      "categorie": "entrees",
+      "prix": 6.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "brik.jpg"
+    },
+    {
+      "id": "item_021",
+      "nom": {
+        "fr": "Chorba",
+        "en": "Chorba soup",
+        "ar": "شربة"
+      },
+      "description": {
+        "fr": "Soupe traditionnelle à l'agneau",
+        "en": "Traditional lamb soup",
+        "ar": "شربة تقليدية باللحم الضأن"
+      },
+      "categorie": "entrees",
+      "prix": 7.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "chorba.jpg"
+    },
+    {
+      "id": "item_003",
+      "nom": {
+        "fr": "Couscous agneau",
+        "en": "Lamb couscous",
+        "ar": "كسكسي باللحم"
+      },
+      "description": {
+        "fr": "Semoule, légumes de saison, agneau mijoté",
+        "en": "Semolina, seasonal vegetables, slow-cooked lamb",
+        "ar": "سميد، خضروات موسمية، لحم ضأن مطهو ببطء"
+      },
+      "categorie": "plats",
+      "prix": 18.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "couscous_agneau.jpg"
+    },
+    {
+      "id": "item_022",
+      "nom": {
+        "fr": "Tagine poulet",
+        "en": "Chicken tagine",
+        "ar": "طاجين بالدجاج"
+      },
+      "description": {
+        "fr": "Poulet, olives, citron confit",
+        "en": "Chicken, olives, preserved lemon",
+        "ar": "دجاج، زيتون، ليمون مخلل"
+      },
+      "categorie": "plats",
+      "prix": 13.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "tagine_poulet.jpg"
+    },
+    {
+      "id": "item_023",
+      "nom": {
+        "fr": "Grillades mixtes",
+        "en": "Mixed grill",
+        "ar": "مشاوي مشكلة"
+      },
+      "description": {
+        "fr": "Merguez, brochettes, kefta",
+        "en": "Merguez, skewers, kefta",
+        "ar": "مرقاز، أسياخ، كفتة"
+      },
+      "categorie": "plats",
+      "prix": 22.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "grillades_mixtes.jpg"
+    },
+    {
+      "id": "item_009",
+      "nom": {
+        "fr": "Café espresso",
+        "en": "Espresso",
+        "ar": "قهوة إسبريسو"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 2.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "cafe_espresso.jpg"
+    },
+    {
+      "id": "item_011",
+      "nom": {
+        "fr": "Thé à la menthe",
+        "en": "Mint tea",
+        "ar": "شاي بالنعناع"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 3.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "the_a_la_menthe.jpg"
+    },
+    {
+      "id": "item_012",
+      "nom": {
+        "fr": "Jus d'orange frais",
+        "en": "Fresh orange juice",
+        "ar": "عصير برتقال طازج"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 5.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "jus_d_orange_frais.jpg"
+    },
+    {
+      "id": "item_024",
+      "nom": {
+        "fr": "Makroudh",
+        "en": "Makroudh",
+        "ar": "مقروض"
+      },
+      "description": {
+        "fr": "Pâtisserie aux dattes",
+        "en": "Date pastry",
+        "ar": "حلوى بالتمر"
+      },
+      "categorie": "desserts",
+      "prix": 4.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "makroudh.jpg"
+    },
+    {
+      "id": "item_025",
+      "nom": {
+        "fr": "Baklawa",
+        "en": "Baklava",
+        "ar": "بقلاوة"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "desserts",
+      "prix": 5.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "baklawa.jpg"
+    },
+    {
+      "id": "item_014",
+      "nom": {
+        "fr": "Eau minérale",
+        "en": "Mineral water",
+        "ar": "ماء معدني"
+      },
+      "description": {
+        "fr": "50cl",
+        "en": "50cl",
+        "ar": "50 مل"
+      },
+      "categorie": "boissons",
+      "prix": 2.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": true,
+      "image": "eau_minerale.jpg"
+    },
+    {
+      "id": "item_015",
+      "nom": {
+        "fr": "Fondant au chocolat",
+        "en": "Chocolate fondant",
+        "ar": "فوندان بالشوكولاتة"
+      },
+      "description": {
+        "fr": "Coeur coulant, servi tiède",
+        "en": "Molten center, served warm",
+        "ar": "قلب سائل، يقدم دافئاً"
+      },
+      "categorie": "desserts",
+      "prix": 6.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "fondant_chocolat.jpg"
+    },
+    {
+      "id": "item_026",
+      "nom": {
+        "fr": "Spaghetti bolognaise",
+        "en": "Spaghetti bolognese",
+        "ar": "سباغيتي بولونيز"
+      },
+      "description": {
+        "fr": "Sauce tomate, bœuf haché mijoté",
+        "en": "Tomato sauce, slow-cooked ground beef",
+        "ar": "صلصة طماطم، لحم بقري مفروم"
+      },
+      "categorie": "pates",
+      "prix": 14.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "spaghetti_bolognaise.jpg"
+    },
+    {
+      "id": "item_027",
+      "nom": {
+        "fr": "Pâtes au poulet et champignons",
+        "en": "Chicken & mushroom pasta",
+        "ar": "معكرونة بالدجاج والفطر"
+      },
+      "description": {
+        "fr": "Sauce crémeuse, parmesan",
+        "en": "Creamy sauce, parmesan",
+        "ar": "صلصة كريمية، جبن بارميزان"
+      },
+      "categorie": "pates",
+      "prix": 13.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pates_poulet_champignons.jpg"
+    },
+    {
+      "id": "item_028",
+      "nom": {
+        "fr": "Lasagnes maison",
+        "en": "Homemade lasagna",
+        "ar": "لازانيا منزلية"
+      },
+      "description": {
+        "fr": "Bœuf, béchamel, mozzarella gratinée",
+        "en": "Beef, béchamel, melted mozzarella",
+        "ar": "لحم بقري، بشاميل، جبن موزاريلا"
+      },
+      "categorie": "pates",
+      "prix": 15.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "lasagnes.jpg"
+    },
+    {
+      "id": "item_029",
+      "nom": {
+        "fr": "Pizza Margherita",
+        "en": "Margherita pizza",
+        "ar": "بيتزا مارغريتا"
+      },
+      "description": {
+        "fr": "Sauce tomate, mozzarella, basilic",
+        "en": "Tomato sauce, mozzarella, basil",
+        "ar": "صلصة طماطم، موزاريلا، ريحان"
+      },
+      "categorie": "pizzas",
+      "prix": 14.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_margherita.jpg"
+    },
+    {
+      "id": "item_030",
+      "nom": {
+        "fr": "Pizza 4 fromages",
+        "en": "Four cheese pizza",
+        "ar": "بيتزا أربعة أجبان"
+      },
+      "description": {
+        "fr": "Sauce tomate, mozzarella, parmesan, gorgonzola, emmental",
+        "en": "Tomato sauce, mozzarella, parmesan, gorgonzola, emmental",
+        "ar": "صلصة طماطم، موزاريلا، بارميزان، غورغونزولا، إمنتال"
+      },
+      "categorie": "pizzas",
+      "prix": 17.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_4_fromages.jpg"
+    },
+    {
+      "id": "item_031",
+      "nom": {
+        "fr": "Pizza thon & poivrons",
+        "en": "Tuna & pepper pizza",
+        "ar": "بيتزا التونة والفلفل"
+      },
+      "description": {
+        "fr": "Sauce tomate, thon, poivrons, olives, œuf",
+        "en": "Tomato sauce, tuna, peppers, olives, egg",
+        "ar": "صلصة طماطم، تونة، فلفل، زيتون، بيضة"
+      },
+      "categorie": "pizzas",
+      "prix": 16.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_thon_poivrons.jpg"
+    },
+    {
+      "id": "item_032",
+      "nom": {
+        "fr": "Café crème",
+        "en": "Café crème",
+        "ar": "قهوة بالحليب"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 3.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "cafe_creme.jpg"
+    },
+    {
+      "id": "item_033",
+      "nom": {
+        "fr": "Cappuccino",
+        "en": "Cappuccino",
+        "ar": "كابتشينو"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 4.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "cappuccino.jpg"
+    },
+    {
+      "id": "item_034",
+      "nom": {
+        "fr": "Café allongé",
+        "en": "Long black coffee",
+        "ar": "قهوة سادة طويلة"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 2.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": true,
+      "image": "cafe_allonge.jpg"
+    },
+    {
+      "id": "item_035",
+      "nom": {
+        "fr": "Tiramisu",
+        "en": "Tiramisu",
+        "ar": "تيراميسو"
+      },
+      "description": {
+        "fr": "Mascarpone, café, cacao",
+        "en": "Mascarpone, coffee, cocoa",
+        "ar": "ماسكاربوني، قهوة، كاكاو"
+      },
+      "categorie": "desserts",
+      "prix": 7.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "tiramisu.jpg"
+    },
+    {
+      "id": "item_036",
+      "nom": {
+        "fr": "Glace (2 boules)",
+        "en": "Ice cream (2 scoops)",
+        "ar": "آيس كريم (كرتان)"
+      },
+      "description": {
+        "fr": "Vanille, chocolat, pistache, fraise",
+        "en": "Vanilla, chocolate, pistachio, strawberry",
+        "ar": "فانيليا، شوكولاتة، فستق، فراولة"
+      },
+      "categorie": "desserts",
+      "prix": 5.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "glace.jpg"
+    },
+    {
+      "id": "item_037",
+      "nom": {
+        "fr": "Crème caramel",
+        "en": "Crème caramel",
+        "ar": "كريم كراميل"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "desserts",
+      "prix": 5.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "creme_caramel.jpg"
+    },
+    {
+      "id": "item_038",
+      "nom": {
+        "fr": "Pizza Reine",
+        "en": "Queen pizza",
+        "ar": "بيتزا رويال"
+      },
+      "description": {
+        "fr": "Sauce tomate, jambon de dinde, champignons, mozzarella",
+        "en": "Tomato sauce, turkey ham, mushrooms, mozzarella",
+        "ar": "صلصة طماطم، لحم ديك رومي، فطر، موزاريلا"
+      },
+      "categorie": "pizzas",
+      "prix": 16.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_reine.jpg"
+    },
+    {
+      "id": "item_039",
+      "nom": {
+        "fr": "Pizza Pepperoni",
+        "en": "Pepperoni pizza",
+        "ar": "بيتزا بيبروني"
+      },
+      "description": {
+        "fr": "Sauce tomate, mozzarella, pepperoni",
+        "en": "Tomato sauce, mozzarella, pepperoni",
+        "ar": "صلصة طماطم، موزاريلا، بيبروني"
+      },
+      "categorie": "pizzas",
+      "prix": 18.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_pepperoni.jpg"
+    },
+    {
+      "id": "item_040",
+      "nom": {
+        "fr": "Pizza Fruits de mer",
+        "en": "Seafood pizza",
+        "ar": "بيتزا المأكولات البحرية"
+      },
+      "description": {
+        "fr": "Crevettes, calamars, mozzarella",
+        "en": "Shrimps, squid, mozzarella",
+        "ar": "روبيان، حبار، موزاريلا"
+      },
+      "categorie": "pizzas",
+      "prix": 20.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_fruits_mer.jpg"
+    },
+    {
+      "id": "item_041",
+      "nom": {
+        "fr": "Pizza Végétarienne",
+        "en": "Vegetarian pizza",
+        "ar": "بيتزا نباتية"
+      },
+      "description": {
+        "fr": "Poivrons, champignons, olives, mozzarella",
+        "en": "Peppers, mushrooms, olives, mozzarella",
+        "ar": "فلفل، فطر، زيتون، موزاريلا"
+      },
+      "categorie": "pizzas",
+      "prix": 15.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pizza_vegetarienne.jpg"
+    },
+    {
+      "id": "item_042",
+      "nom": {
+        "fr": "Spaghetti Carbonara",
+        "en": "Spaghetti Carbonara",
+        "ar": "سباغيتي كاربونارا"
+      },
+      "description": {
+        "fr": "Crème, parmesan, dinde fumée",
+        "en": "Cream, parmesan, smoked turkey",
+        "ar": "كريمة، بارميزان، ديك رومي مدخن"
+      },
+      "categorie": "pates",
+      "prix": 15.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "carbonara.jpg"
+    },
+    {
+      "id": "item_043",
+      "nom": {
+        "fr": "Penne Arrabbiata",
+        "en": "Penne Arrabbiata",
+        "ar": "بيني أرابياتا"
+      },
+      "description": {
+        "fr": "Sauce tomate épicée",
+        "en": "Spicy tomato sauce",
+        "ar": "صلصة طماطم حارة"
+      },
+      "categorie": "pates",
+      "prix": 13.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": false,
+      "image": "penne_arrabbiata.jpg"
+    },
+    {
+      "id": "item_044",
+      "nom": {
+        "fr": "Pâtes Fruits de mer",
+        "en": "Seafood pasta",
+        "ar": "معكرونة بالمأكولات البحرية"
+      },
+      "description": {
+        "fr": "Crevettes, calamars, sauce tomate",
+        "en": "Shrimps, squid, tomato sauce",
+        "ar": "روبيان، حبار، صلصة طماطم"
+      },
+      "categorie": "pates",
+      "prix": 18.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "pates_fruits_mer.jpg"
+    },
+    {
+      "id": "item_045",
+      "nom": {
+        "fr": "Couscous poulet",
+        "en": "Chicken couscous",
+        "ar": "كسكسي بالدجاج"
+      },
+      "description": {
+        "fr": "Semoule, légumes, poulet",
+        "en": "Semolina, vegetables, chicken",
+        "ar": "سميد، خضروات، دجاج"
+      },
+      "categorie": "plats",
+      "prix": 16.5,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "couscous_poulet.jpg"
+    },
+    {
+      "id": "item_046",
+      "nom": {
+        "fr": "Escalope grillée",
+        "en": "Grilled chicken escalope",
+        "ar": "إسكالوب مشوي"
+      },
+      "description": {
+        "fr": "Escalope de poulet, frites, salade",
+        "en": "Grilled chicken escalope with fries",
+        "ar": "إسكالوب دجاج مشوي مع بطاطا مقلية"
+      },
+      "categorie": "plats",
+      "prix": 17.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "escalope_grillee.jpg"
+    },
+    {
+      "id": "item_047",
+      "nom": {
+        "fr": "Filet de poisson grillé",
+        "en": "Grilled fish fillet",
+        "ar": "سمك مشوي"
+      },
+      "description": {
+        "fr": "Poisson grillé, légumes",
+        "en": "Grilled fish with vegetables",
+        "ar": "سمك مشوي مع خضروات"
+      },
+      "categorie": "plats",
+      "prix": 22.0,
+      "disponible": true,
+      "vegetarien": false,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "poisson_grille.jpg"
+    },
+    {
+      "id": "item_048",
+      "nom": {
+        "fr": "Latte",
+        "en": "Latte",
+        "ar": "لاتيه"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 4.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "latte.jpg"
+    },
+    {
+      "id": "item_049",
+      "nom": {
+        "fr": "Chocolat chaud",
+        "en": "Hot chocolate",
+        "ar": "شوكولاتة ساخنة"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 5.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "chocolat_chaud.jpg"
+    },
+    {
+      "id": "item_050",
+      "nom": {
+        "fr": "Coca-Cola",
+        "en": "Coca-Cola",
+        "ar": "كوكاكولا"
+      },
+      "description": {
+        "fr": "33 cl",
+        "en": "33 cl",
+        "ar": "33 سل"
+      },
+      "categorie": "boissons",
+      "prix": 3.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": true,
+      "image": "coca.jpg"
+    },
+    {
+      "id": "item_051",
+      "nom": {
+        "fr": "Sprite",
+        "en": "Sprite",
+        "ar": "سبرايت"
+      },
+      "description": {
+        "fr": "33 cl",
+        "en": "33 cl",
+        "ar": "33 سل"
+      },
+      "categorie": "boissons",
+      "prix": 3.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": true,
+      "image": "sprite.jpg"
+    },
+    {
+      "id": "item_052",
+      "nom": {
+        "fr": "Milkshake Fraise",
+        "en": "Strawberry milkshake",
+        "ar": "ميلك شيك بالفراولة"
+      },
+      "description": {
+        "fr": "",
+        "en": "",
+        "ar": ""
+      },
+      "categorie": "boissons",
+      "prix": 8.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": true,
+      "image": "milkshake_fraise.jpg"
+    },
+    {
+      "id": "item_053",
+      "nom": {
+        "fr": "Cheesecake",
+        "en": "Cheesecake",
+        "ar": "تشيز كيك"
+      },
+      "description": {
+        "fr": "Gâteau au fromage",
+        "en": "Cream cheese cake",
+        "ar": "كعكة الجبن"
+      },
+      "categorie": "desserts",
+      "prix": 8.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "cheesecake.jpg"
+    },
+    {
+      "id": "item_054",
+      "nom": {
+        "fr": "Brownie",
+        "en": "Brownie",
+        "ar": "براوني"
+      },
+      "description": {
+        "fr": "Brownie au chocolat",
+        "en": "Chocolate brownie",
+        "ar": "براوني بالشوكولاتة"
+      },
+      "categorie": "desserts",
+      "prix": 6.5,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": false,
+      "sans_gluten": false,
+      "image": "brownie.jpg"
+    },
+    {
+      "id": "item_055",
+      "nom": {
+        "fr": "Salade de fruits",
+        "en": "Fruit salad",
+        "ar": "سلطة فواكه"
+      },
+      "description": {
+        "fr": "Fruits frais de saison",
+        "en": "Fresh seasonal fruits",
+        "ar": "فواكه طازجة"
+      },
+      "categorie": "desserts",
+      "prix": 7.0,
+      "disponible": true,
+      "vegetarien": true,
+      "vegan": true,
+      "sans_gluten": true,
+      "image": "salade_fruits.jpg"
+    }
+  ],
+  "options_globales": {},
+  "menu_url": "http://192.168.1.50:8000/menu"
+}

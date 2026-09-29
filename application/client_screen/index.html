@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+  <title>NEXOR</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="screen">
+
+    <!-- ── Header ─────────────────────────────────────────────────── -->
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-mark">N</span>
+        <div class="brand-copy">
+          <span class="brand-name">NEXOR</span>
+          <span class="brand-sub" id="brandSub">Votre assistant à table</span>
+        </div>
+      </div>
+      <div class="lang-row" id="langRow">
+        <button class="lang-pill active" type="button" data-lang="fr">FR</button>
+        <button class="lang-pill" type="button" data-lang="en">EN</button>
+        <button class="lang-pill" type="button" data-lang="ar">عربي</button>
+      </div>
+    </header>
+
+    <!-- ── Zone centrale : orbe vocal + transcription ────────────── -->
+    <main class="stage">
+
+      <span class="stage-kicker" id="stageKicker">Je suis là pour vous aider</span>
+
+      <div class="orb-wrap">
+        <svg class="orb" id="orb" viewBox="0 0 200 200">
+          <circle class="orb-ring" cx="100" cy="100" r="90" />
+          <circle class="orb-ring orb-ring--2" cx="100" cy="100" r="70" />
+          <circle class="orb-core" cx="100" cy="100" r="46" />
+          <g class="orb-wave" id="orbWave"></g>
+
+          <!-- Visage animé : yeux + bouches (une par état, visibilité gérée en CSS via la classe d'état sur .orb) -->
+          <g class="orb-face" id="orbFace">
+            <ellipse class="eye eye-left" cx="82" cy="94" rx="6.5" ry="8.5" />
+            <ellipse class="eye eye-right" cx="118" cy="94" rx="6.5" ry="8.5" />
+
+            <path class="mouth mouth-idle" d="M 84 118 Q 100 123 116 118" />
+            <ellipse class="mouth mouth-listening" cx="100" cy="119" rx="7" ry="9" />
+            <path class="mouth mouth-processing" d="M 86 118 L 114 118" />
+            <ellipse class="mouth mouth-speaking" id="orbMouthSpeaking" cx="100" cy="118" rx="10" ry="6" />
+          </g>
+        </svg>
+        <div class="orb-icon" id="orbIcon"></div>
+      </div>
+
+      <p class="state-label" id="stateLabel">Bonjour ! Dites-moi ce que vous souhaitez commander.</p>
+
+      <div class="transcript-box" id="transcriptBox">
+        <p class="transcript-placeholder" id="transcriptPlaceholder">…</p>
+      </div>
+
+    </main>
+
+    <!-- ── Panneau latéral : panier live ─────────────────────────── -->
+    <aside class="cart-panel" id="cartPanel">
+      <div class="cart-head">
+        <span class="cart-icon">🛒</span>
+        <h2 id="cartTitle">Votre commande</h2>
+        <span class="cart-count" id="cartItemCount">0</span>
+      </div>
+      <ul class="cart-list" id="cartList">
+        <li class="cart-empty" id="cartEmpty">Aucun article pour l'instant</li>
+      </ul>
+      <div class="cart-total" id="cartTotal"></div>
+
+      <div class="confirm-flash" id="confirmFlash">
+        <span class="confirm-check">✓</span>
+        <strong id="confirmTitle">Commande envoyée !</strong>
+        <span class="confirm-summary" id="confirmSummary">Le staff commence sa préparation.</span>
+      </div>
+    </aside>
+
+    <!-- ── Bas d'écran : menu / QR / appel staff ─────────────────── -->
+    <footer class="bottombar">
+      <button class="action-btn" id="menuOpenBtn">
+        <span class="action-icon">📋</span><span id="menuOpenLabel">Voir le menu</span>
+      </button>
+      <div class="qr-block">
+        <img src="/api/menu_qr" alt="QR code menu" class="qr-img">
+        <div>
+          <span class="qr-label" id="qrLabel">Scanner pour le menu sur votre téléphone</span>
+          <span class="qr-url" id="qrUrl"></span>
+        </div>
+      </div>
+      <button class="action-btn action-btn--alert" id="callStaffBtn">
+        <span class="action-icon">🖐️</span><span id="callStaffLabel">Appeler le staff</span>
+      </button>
+    </footer>
+
+  </div>
+
+  <!-- ── Overlay menu plein écran ─────────────────────────────────── -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-card">
+      <div class="menu-head">
+        <div>
+          <span class="menu-kicker" id="menuKicker">Fait avec soin</span>
+          <h2 id="menuTitle">Notre menu</h2>
+        </div>
+        <button class="btn-close" id="menuCloseBtn" aria-label="Fermer">✕</button>
+      </div>
+      <div class="menu-categories" id="menuCategories"></div>
+      <div class="menu-body" id="menuBody"></div>
+
+      <div class="menu-footer" id="menuFooter">
+        <div class="menu-footer-info">
+          <span id="menuCartCount">0 article</span>
+          <span class="menu-footer-total" id="menuCartTotal">0.000 TND</span>
+        </div>
+        <button class="action-btn menu-send-btn" id="menuSendBtn" disabled>
+          Envoyer la commande
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Toast confirmation d'appel staff ─────────────────────────── -->
+  <div class="toast" id="staffToast">Un membre du staff arrive à votre table 🙌</div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

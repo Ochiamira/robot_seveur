@@ -1,0 +1,33 @@
+{
+  "model_whisper": "C:\\pfe_project\\communication\\stt\\whisper-small-nexor\\final",
+  "mode": "dir",
+  "generated_at": "2026-08-20T23:04:11.096068",
+  "n_results": 1,
+  "results": [
+    {
+      "fichier": "utt_00185_Denise.wav",
+      "chemin": "C:\\pfe_project\\communication\\stt\\test_audio\\utt_00185_Denise.wav",
+      "duree_audio_s": 4.25,
+      "stt_latence_s": 7.793,
+      "stt_text": "ben, je voudrais le poisson grille bien cuit, s'il vous plait.",
+      "nlp_latence_s": 0.02,
+      "lang": "fr",
+      "clean_text": ", je voudrais le poisson grille bien cuit, s'il vous plait.",
+      "intent": "commander",
+      "score": 0.67,
+      "items": [
+        {
+          "nom": "Filet de poisson grillé",
+          "quantity": 1,
+          "size": null,
+          "modifiers": [
+            "bien_cuit"
+          ]
+        }
+      ],
+      "response": "J'ai ajouté 1× Filet de poisson grillé (22.000 TND) à votre commande. Autre chose ?",
+      "dialog_finished": false,
+      "timestamp": "2026-08-20T23:04:11.095056"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "results": {
+    "Modules NLP": true,
+    "Cas limites": true,
+    "Performance NLP": true,
+    "Conversations": true
+  },
+  "all_ok": true,
+  "run_llm": true
+}

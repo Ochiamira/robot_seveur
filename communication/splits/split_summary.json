@@ -1,0 +1,25 @@
+{
+  "total": 40737,
+  "train": 32653,
+  "val": 4025,
+  "test": 4059,
+  "random_seed": 42,
+  "split_method": "grouped_by_lang__base_id_stratified_by_lang",
+  "lang_dist": {
+    "train": {
+      "fr": 10689,
+      "en": 10968,
+      "ar": 10996
+    },
+    "val": {
+      "fr": 1355,
+      "en": 1365,
+      "ar": 1305
+    },
+    "test": {
+      "fr": 1354,
+      "en": 1281,
+      "ar": 1424
+    }
+  }
+}

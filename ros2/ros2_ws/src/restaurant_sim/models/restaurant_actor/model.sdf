@@ -1,0 +1,122 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+    <actor name="actor_test">
+        <pose>0 0 1.0 0 0 0</pose>
+        <skin>
+            <filename>meshes/walk.dae</filename>
+            <scale>1.0</scale>
+        </skin>
+        <animation name="gesture">
+            <filename>meshes/gesture.bvh</filename>
+            <scale>0.055</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="walk">
+            <filename>meshes/walk.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="moonwalk">
+            <filename>meshes/moonwalk.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="run">
+            <filename>meshes/run.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="stand">
+            <filename>meshes/stand.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="sit_down">
+            <filename>meshes/sit_down.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="sitting">
+            <filename>meshes/sitting.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <animation name="stand_up">
+            <filename>meshes/stand_up.dae</filename>
+            <scale>1.0</scale>
+            <interpolate_x>true</interpolate_x>
+        </animation>
+        <script>
+            <loop>true</loop>
+            <delay_start>60.0</delay_start>
+            <auto_start>true</auto_start>
+
+            <trajectory id="0" type="stand">
+                <waypoint>
+                    <time>0</time>
+                    <pose>0 0 1.0 0 0 1.5708</pose>
+                </waypoint>
+                <waypoint>
+                    <time>2</time>
+                    <pose>0 0 1.0 0 0 1.5708</pose>
+                </waypoint>
+            </trajectory>
+
+            <trajectory id="1" type="walk">
+                <waypoint>
+                    <time>2</time>
+                    <pose>0 0 1.0 0 0 1.5708</pose>
+                </waypoint>
+                <waypoint>
+                    <time>6</time>
+                    <pose>0 1.5 1.0 0 0 1.5708</pose>
+                </waypoint>
+                <waypoint>
+                    <time>8</time>
+                    <pose>0.8 2.0 1.0 0 0 0.559</pose>
+                </waypoint>
+                <waypoint>
+                    <time>10</time>
+                    <pose>1.6 2.5 1.0 0 0 0.559</pose>
+                </waypoint>
+                <waypoint>
+                    <time>12</time>
+                    <pose>2.05 2.95 1.0 0 0 0.7854</pose>
+                </waypoint>
+            </trajectory>
+
+            <trajectory id="2" type="stand">
+                <waypoint>
+                    <time>12</time>
+                    <pose>2.05 2.95 1.0 0 0 0.7854</pose>
+                </waypoint>
+                <waypoint>
+                    <time>13</time>
+                    <pose>2.05 2.95 1.0 0 0 0</pose>
+                </waypoint>
+            </trajectory>
+
+            <trajectory id="3" type="sit_down">
+                <waypoint>
+                    <time>13</time>
+                    <pose>2.05 2.95 1.0 0 0 0</pose>
+                </waypoint>
+                <waypoint>
+                    <time>16</time>
+                    <pose>2.05 2.95 0.6 0 0 0</pose>
+                </waypoint>
+            </trajectory>
+
+            <trajectory id="4" type="sitting">
+                <waypoint>
+                    <time>16</time>
+                    <pose>2.05 2.95 0.6 0 0 0</pose>
+                </waypoint>
+                <waypoint>
+                    <time>3616</time>
+                    <pose>2.05 2.95 0.6 0 0 0</pose>
+                </waypoint>
+            </trajectory>
+        </script>
+    </actor>
+</sdf>

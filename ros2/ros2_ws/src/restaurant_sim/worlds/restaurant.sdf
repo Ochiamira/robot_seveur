@@ -1,0 +1,275 @@
+<?xml version="1.0" ?>
+<sdf version="1.10">
+  <world name="restaurant">
+
+    <physics name="restaurant_physics" type="ignored">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+    </physics>
+
+    <plugin
+      filename="gz-sim-physics-system"
+      name="gz::sim::systems::Physics"/>
+
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands"/>
+
+    <plugin
+      filename="gz-sim-scene-broadcaster-system"
+      name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin
+      filename="gz-sim-sensors-system"
+      name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <plugin
+      filename="gz-sim-imu-system"
+      name="gz::sim::systems::Imu"/>  
+
+    <scene>
+      <ambient>0.7 0.7 0.7 1</ambient>
+      <background>0.85 0.85 0.85 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <light type="directional" name="sun">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <direction>-0.5 0.2 -0.9</direction>
+    </light>
+
+    <!-- Sol : 12 m × 8 m -->
+    <model name="restaurant_floor">
+      <static>true</static>
+      <pose>0 0 -0.05 0 0 0</pose>
+      <link name="floor_link">
+        <collision name="floor_collision">
+          <geometry>
+            <box>
+              <size>12 8 0.1</size>
+            </box>
+          </geometry>
+        </collision>
+        <visual name="floor_visual">
+          <geometry>
+            <box>
+              <size>12 8 0.1</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.65 0.65 0.65 1</ambient>
+            <diffuse>0.75 0.75 0.75 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mur nord -->
+    <model name="north_wall">
+      <static>true</static>
+      <pose>0 4 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="collision">
+          <geometry><box><size>12 0.15 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>12 0.15 2.5</size></box></geometry>
+          <material>
+            <ambient>0.9 0.9 0.85 1</ambient>
+            <diffuse>0.9 0.9 0.85 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mur ouest -->
+    <model name="west_wall">
+      <static>true</static>
+      <pose>-6 0 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="collision">
+          <geometry><box><size>0.15 8 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.15 8 2.5</size></box></geometry>
+          <material>
+            <ambient>0.9 0.9 0.85 1</ambient>
+            <diffuse>0.9 0.9 0.85 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mur est -->
+    <model name="east_wall">
+      <static>true</static>
+      <pose>6 0 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="collision">
+          <geometry><box><size>0.15 8 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.15 8 2.5</size></box></geometry>
+          <material>
+            <ambient>0.9 0.9 0.85 1</ambient>
+            <diffuse>0.9 0.9 0.85 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mur sud gauche : laisse une entrée centrale -->
+    <model name="south_wall_left">
+      <static>true</static>
+      <pose>-3.5 -4 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="collision">
+          <geometry><box><size>5 0.15 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>5 0.15 2.5</size></box></geometry>
+          <material>
+            <ambient>0.9 0.9 0.85 1</ambient>
+            <diffuse>0.9 0.9 0.85 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Mur sud droit -->
+    <model name="south_wall_right">
+      <static>true</static>
+      <pose>3.5 -4 1.25 0 0 0</pose>
+      <link name="wall_link">
+        <collision name="collision">
+          <geometry><box><size>5 0.15 2.5</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>5 0.15 2.5</size></box></geometry>
+          <material>
+            <ambient>0.9 0.9 0.85 1</ambient>
+            <diffuse>0.9 0.9 0.85 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+    <!-- Comptoir de service -->
+    <model name="service_counter">
+      <static>true</static>
+      <pose>0 3.35 0 0 0 0</pose>
+
+      <link name="counter_link">
+        <collision name="counter_collision">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6 0.7 1.0</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="counter_body_visual">
+          <pose>0 0 0.5 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.6 0.7 1.0</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.32 0.14 0.05 1</ambient>
+            <diffuse>0.45 0.22 0.08 1</diffuse>
+          </material>
+        </visual>
+
+        <visual name="counter_top_visual">
+          <pose>0 0 1.04 0 0 0</pose>
+          <geometry>
+            <box>
+              <size>2.8 0.85 0.08</size>
+            </box>
+          </geometry>
+          <material>
+            <ambient>0.12 0.06 0.03 1</ambient>
+            <diffuse>0.20 0.10 0.04 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Repère visuel du point de départ et de retour -->
+    <model name="home_marker">
+      <static>true</static>
+      <pose>0 2.35 0.006 0 0 0</pose>
+
+      <link name="home_marker_link">
+        <visual name="home_marker_visual">
+          <geometry>
+            <cylinder>
+              <radius>0.25</radius>
+              <length>0.012</length>
+            </cylinder>
+          </geometry>
+          <material>
+            <ambient>0.05 0.7 0.15 1</ambient>
+            <diffuse>0.05 0.9 0.20 1</diffuse>
+            <emissive>0.02 0.2 0.04 1</emissive>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Tables du côté gauche -->
+    <include>
+      <uri>model://restaurant_table</uri>
+      <name>table_1</name>
+      <pose>-3.0 1.45 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://restaurant_table</uri>
+      <name>table_3</name>
+      <pose>-3.0 -1.65 0 0 0 0</pose>
+    </include>
+
+    <!-- Tables du côté droit -->
+    <include>
+      <uri>model://restaurant_table</uri>
+      <name>table_2</name>
+      <pose>3.0 1.45 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://restaurant_table</uri>
+      <name>table_4</name>
+      <pose>3.0 -1.65 0 0 0 0</pose>
+    </include>
+        <include>
+      <uri>model://restaurant_plant</uri>
+      <name>plant_1</name>
+      <pose>-5.4 3.3 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://restaurant_plant</uri>
+      <name>plant_2</name>
+      <pose>5.4 3.3 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://restaurant_plant</uri>
+      <name>plant_3</name>
+      <pose>-5.4 -3.3 0 0 0 0</pose>
+    </include>
+
+    <include>
+      <uri>model://restaurant_plant</uri>
+      <name>plant_4</name>
+      <pose>5.4 -3.3 0 0 0 0</pose>
+    </include>
+  
+  </world>
+</sdf>

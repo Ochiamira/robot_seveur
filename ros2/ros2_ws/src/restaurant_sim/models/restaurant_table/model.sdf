@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<sdf version="1.10">
+  <model name="restaurant_table">
+    <static>true</static>
+
+    <link name="furniture_link">
+
+      <!-- Volume de collision complet de la table -->
+      <collision name="table_collision">
+        <pose>0 0 0.38 0 0 0</pose>
+        <geometry>
+          <box><size>1.2 0.8 0.76</size></box>
+        </geometry>
+      </collision>
+
+      <!-- Plateau -->
+      <visual name="table_top">
+        <pose>0 0 0.75 0 0 0</pose>
+        <geometry>
+          <box><size>1.2 0.8 0.08</size></box>
+        </geometry>
+        <material>
+          <ambient>0.38 0.18 0.07 1</ambient>
+          <diffuse>0.55 0.28 0.10 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- Pied central -->
+      <visual name="table_leg">
+        <pose>0 0 0.36 0 0 0</pose>
+        <geometry>
+          <cylinder>
+            <radius>0.10</radius>
+            <length>0.72</length>
+          </cylinder>
+        </geometry>
+        <material>
+          <ambient>0.18 0.08 0.03 1</ambient>
+          <diffuse>0.25 0.12 0.04 1</diffuse>
+        </material>
+      </visual>
+
+      <!-- Chaise nord -->
+      <collision name="north_chair_collision">
+        <pose>0 0.82 0.4 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.8</size></box></geometry>
+      </collision>
+      <visual name="north_chair_seat">
+        <pose>0 0.82 0.45 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.08</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="north_chair_back">
+        <pose>0 1.02 0.72 0 0 0</pose>
+        <geometry><box><size>0.45 0.08 0.6</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="north_chair_leg">
+        <pose>0 0.82 0.21 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.42</size></box></geometry>
+      </visual>
+
+      <!-- Chaise sud -->
+      <collision name="south_chair_collision">
+        <pose>0 -0.82 0.4 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.8</size></box></geometry>
+      </collision>
+      <visual name="south_chair_seat">
+        <pose>0 -0.82 0.45 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.08</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="south_chair_back">
+        <pose>0 -1.02 0.72 0 0 0</pose>
+        <geometry><box><size>0.45 0.08 0.6</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="south_chair_leg">
+        <pose>0 -0.82 0.21 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.42</size></box></geometry>
+      </visual>
+
+      <!-- Chaise est -->
+      <collision name="east_chair_collision">
+        <pose>0.95 0 0.4 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.8</size></box></geometry>
+      </collision>
+      <visual name="east_chair_seat">
+        <pose>0.95 0 0.45 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.08</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="east_chair_back">
+        <pose>1.15 0 0.72 0 0 0</pose>
+        <geometry><box><size>0.08 0.45 0.6</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="east_chair_leg">
+        <pose>0.95 0 0.21 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.42</size></box></geometry>
+      </visual>
+
+      <!-- Chaise ouest -->
+      <collision name="west_chair_collision">
+        <pose>-0.95 0 0.4 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.8</size></box></geometry>
+      </collision>
+      <visual name="west_chair_seat">
+        <pose>-0.95 0 0.45 0 0 0</pose>
+        <geometry><box><size>0.45 0.45 0.08</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="west_chair_back">
+        <pose>-1.15 0 0.72 0 0 0</pose>
+        <geometry><box><size>0.08 0.45 0.6</size></box></geometry>
+        <material>
+          <ambient>0.12 0.25 0.18 1</ambient>
+          <diffuse>0.16 0.38 0.25 1</diffuse>
+        </material>
+      </visual>
+      <visual name="west_chair_leg">
+        <pose>-0.95 0 0.21 0 0 0</pose>
+        <geometry><box><size>0.08 0.08 0.42</size></box></geometry>
+      </visual>
+
+    </link>
+  </model>
+</sdf>

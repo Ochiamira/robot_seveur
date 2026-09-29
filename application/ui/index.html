@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <title>NEXOR · Poste staff</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">N</span>
+      <div class="brand-text">
+        <span class="brand-name">NEXOR</span>
+        <span class="brand-sub">Pilotage du service</span>
+      </div>
+    </div>
+    <div class="topbar-service">
+      <div class="service-clock">
+        <span class="service-clock-label">Service en cours</span>
+        <strong id="serviceClock">--:--</strong>
+      </div>
+      <div class="conn-status" id="connStatus">
+        <span class="conn-dot" id="connDot"></span>
+        <span id="connLabel">Connexion…</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="grid">
+
+    <!-- ── Commandes ─────────────────────────────────────────────── -->
+    <section class="panel panel-orders">
+      <div class="panel-head">
+        <div>
+          <span class="panel-kicker">Cuisine & salle</span>
+          <h2>Commandes</h2>
+        </div>
+        <div class="panel-head-right">
+          <div class="tabs">
+            <button class="tab active" id="tabLive">En direct</button>
+            <button class="tab" id="tabHistory">Historique</button>
+          </div>
+          <span class="count-badge" id="orderCount">0</span>
+        </div>
+      </div>
+      <div class="orders-list" id="ordersList">
+        <p class="empty-state">Aucune commande pour l'instant. Les commandes confirmées par NEXOR apparaîtront ici.</p>
+      </div>
+    </section>
+
+    <!-- ── Timeline d'une commande (modale légère) ───────────────── -->
+    <div class="timeline-overlay" id="timelineOverlay">
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 id="timelineTitle">Commande</h3>
+          <button class="btn-close" id="timelineCloseBtn">✕</button>
+        </div>
+        <div class="timeline-order-summary" id="timelineOrderSummary"></div>
+        <div class="timeline-steps" id="timelineSteps"></div>
+        <div class="timeline-actions" id="timelineActions"></div>
+      </div>
+    </div>
+
+    <!-- ── Statut robot + alertes ────────────────────────────────── -->
+    <section class="panel panel-status">
+      <div class="panel-head">
+        <div>
+          <span class="panel-kicker">Supervision</span>
+          <h2>Robot</h2>
+        </div>
+      </div>
+
+      <div class="robot-status-card" id="robotStatusCard">
+        <span class="status-dot" id="statusDot"></span>
+        <div class="status-text">
+          <span class="status-label" id="statusLabel">Hors ligne</span>
+          <span class="status-detail" id="statusDetail">En attente de connexion</span>
+        </div>
+      </div>
+
+      <div class="alerts-head">
+        <h3>Alertes</h3>
+        <span class="count-badge count-badge--alert" id="alertCount">0</span>
+      </div>
+      <div class="alerts-list" id="alertsList">
+        <p class="empty-state">Aucune alerte active.</p>
+      </div>
+    </section>
+
+    <!-- ── Position robot ────────────────────────────────────────── -->
+    <section class="panel panel-map">
+      <div class="panel-head">
+        <div>
+          <span class="panel-kicker">Temps réel</span>
+          <h2>Position en salle</h2>
+        </div>
+      </div>
+      <div class="map-wrap">
+        <canvas id="floorCanvas" width="480" height="480"></canvas>
+      </div>
+      <div class="map-legend" aria-label="Légende du plan">
+        <span><i class="legend-dot libre"></i>Libre</span>
+        <span><i class="legend-dot occupee"></i>Occupée</span>
+        <span><i class="legend-dot attente"></i>En attente</span>
+        <span><i class="legend-dot service"></i>En service</span>
+      </div>
+    </section>
+
+    <!-- ── Paiement (modale) ─────────────────────────────────────── -->
+    <div class="timeline-overlay" id="payOverlay">
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <h3 id="payTitle">Encaisser</h3>
+          <button class="btn-close" id="payCloseBtn">✕</button>
+        </div>
+
+        <p class="pay-total">Total dû : <strong id="payTotal">0.000 TND</strong></p>
+
+        <div class="pay-methods">
+          <button class="pay-method-btn active" id="payMethodEspeces">Espèces</button>
+          <button class="pay-method-btn" id="payMethodCarte">Carte</button>
+        </div>
+
+        <div id="payCashFields">
+          <label class="pay-label" for="payAmount">Montant reçu</label>
+          <input type="number" step="0.001" id="payAmount" class="pay-input" placeholder="0.000">
+          <p class="pay-change" id="payChange"></p>
+        </div>
+
+        <p class="pay-error" id="payError"></p>
+
+        <button class="btn-advance pay-confirm" id="payConfirmBtn">Confirmer
+          l'encaissement</button>
+      </div>
+    </div>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+======================================================================
+  RAPPORT D'AUGMENTATION — DATASET STT MULTILINGUE (v2)
+  Généré le : 2026-06-20 09:55:02
+======================================================================
+
+─── APERÇU GLOBAL ───────────────────────────────────────────────────
+  Fichiers originaux          :   18,379
+  Fichiers augmentés générés  :   22,358
+  Total combiné               :   40,737
+
+  Durée originale             : 19h 22min 11s (69731.5 s)
+  Durée augmentée             : 23h 32min 26s (84746.4 s)
+  Durée totale combinée       : 42h 54min 37s (154477.9 s)
+  Facteur d'augmentation      : x2.22
+
+─── RÉPARTITION PAR TYPE D'AUGMENTATION ────────────────────────────
+  restaurant_noise       (27%)  succès=4,957  erreurs=  0
+  background_music       (10%)  succès=1,833  erreurs=  0
+  babble_crosstalk       (10%)  succès=1,833  erreurs=  0
+  speed_perturbation     (15%)  succès=2,750  erreurs=  0
+  pitch_shift            ( 5%)  succès=  912  erreurs=  0
+  gain_variation         (15%)  succès=2,750  erreurs=  0
+  telephone_bandwidth    (10%)  succès=1,833  erreurs=  0
+  clipping_distortion    ( 5%)  succès=  912  erreurs=  0
+  reverberation          (10%)  succès=1,833  erreurs=  0
+  combo_noise_reverb     ( 8%)  succès=1,466  erreurs=  0
+  combo_speed_pitch      ( 7%)  succès=1,279  erreurs=  0
+
+─── RÉPARTITION PAR LANGUE ──────────────────────────────────────────
+  ar         :  7,527 fichiers augmentés
+  en         :  7,474 fichiers augmentés
+  fr         :  7,357 fichiers augmentés
+
+─── PARAMÈTRES D'AUGMENTATION ───────────────────────────────────────
+  Taux cible total           : 122%
+  Fréquence d'échantillonnage : 16000 Hz
+  Format de sortie            : WAV mono PCM 16-bit
+  Graine aléatoire            : 42
+
+─── FICHIERS DE SORTIE ──────────────────────────────────────────────
+  Manifest combiné            : dataset_metadata_augmented.csv
+  Dossier audios augmentés    : dataset_augmented_v2/  (même structure que communication/dataset_v2/)
+  Journal d'exécution         : augmentation.log
+
+======================================================================
+  FIN DU RAPPORT
+======================================================================
